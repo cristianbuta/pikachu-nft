@@ -3,7 +3,7 @@
 */
 require('dotenv').config();
 require("@nomiclabs/hardhat-ethers");
-const { API_URL, METAMASK_ACCOUNT_PK } = process.env;
+const { API_URL, METAMASK_ACCOUNT_PRIVATE_KEY } = process.env;
 module.exports = {
    solidity: "0.8.1",
    defaultNetwork: "ropsten",
@@ -11,7 +11,7 @@ module.exports = {
       hardhat: {},
       ropsten: {
          url: API_URL,
-         accounts: [`0x${METAMASK_ACCOUNT_PK}`]
+         accounts: [`0x${METAMASK_ACCOUNT_PRIVATE_KEY}`]
       }
    },
 }
